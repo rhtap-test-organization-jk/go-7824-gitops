@@ -12,7 +12,7 @@ pipeline {
             idleMinutes '30'
             containerTemplate {
                 name 'jnlp'
-                image 'image-registry.openshift-image-registry.svc:5000/jenkins/jenkins-agent-base:latest'
+                image 'image-registry.openshift-image-registry.svc:5000/jenkins/jenkins-agent-base@sha256:495c6ba97ec4509694a5afcf7c6e1fbaeda570031c1b6d03e0e26fa13b4c8f1e'
                 ttyEnabled true
                 args '${computer.jnlpmac} ${computer.name}'
             }
